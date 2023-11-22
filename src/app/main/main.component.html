@@ -1,0 +1,169 @@
+<main>
+    <div class="section1"></div>
+    <div class="section2">
+        <div class="heading">
+            <h1>
+                {{"main-title-regular" | translate}} <span class="asia-text">{{"main-title-green" | translate}}</span>
+            </h1>
+        </div>
+
+        <div class="sort-menu">
+            <div class="container">
+                <div class="top">
+                    <div class="active culinasia-special">
+                        <p>Culinasia special</p>
+                    </div>
+                    <div class="support-dish">
+                        <p [routerLink]="[ '/product/support-dish' ]">{{"starters" | translate}}</p>
+                    </div>
+                    <div class="breakfast-18">
+                        <p>{{"breakfast-text" | translate}}</p>
+                    </div>
+                    <div class="ramen">
+                        <p>{{"ramen" | translate}}</p>
+                    </div>
+                    <div class="asian-wok">
+                        <p>Asian Wok</p>
+                    </div>
+                    <div class="asian-poke">
+                        <p>Asian Poke</p>
+                    </div>
+                    <div class="sushi-burger">
+                        <p>{{"sushi-burgers" | translate}}</p>
+                    </div>
+                    <div class="rols">
+                        <p>{{"rols" | translate}}</p>
+                    </div>
+                    <div class="sets">
+                        <p>{{"sets" | translate}}</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="deserts">
+                        <a href="/product/deserts">
+                            {{"deserts" | translate}}
+                        </a></div>
+                    <div class="drinks">
+                        <a href="/product/drinks">
+                            {{"drinks" | translate}}
+                        </a>
+                    </div>
+                    <div class="drinks-18">
+                        <a href="/product/drinks-18">
+                            {{"alcohol-drinks" | translate}}
+                        </a>
+                    </div>
+                    <div class="noa-shop">
+                        <a href="/product/noa-shop">
+                            NOA shop
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-menu-mobile">
+            <div class="row">
+                <div class="left">
+                    <a href="/product/culinasia-special">
+                        <img src="https://noa.ua/wp-content/uploads/2023/01/ramen-kari-z-krevetkamy-4-350x350.webp"
+                            alt="">
+                        <p>Culinasia special</p>
+                    </a>
+                </div>
+
+                <div class="right">
+                    <a href="/product/breakfast-18">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtsnidanky-350x350.webp"
+                            alt="">
+                        <p>{{"breakfast-text" | translate}}</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <a href="/product/support-dish">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtstartery-350x350.webp"
+                            alt="">
+                        <p>{{"starters" | translate}}</p>
+                    </a>
+                </div>
+
+                <div class="right">
+                    <a href="/product/ramen">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtramen-350x350.webp" alt="">
+                        <p>{{"ramen" | translate}}</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <a href="/product/asian-poke">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtasian-wok-350x350.webp"
+                            alt="">
+                        <p>Asian Poke</p>
+                    </a>
+                </div>
+
+                <div class="right">
+                    <a href="/product/sushi-burger">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtasian-poke-350x350.webp"
+                            alt="">
+                        <p>{{"sushi-burgers" | translate}}</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <a href="/product/rols">
+                        <img src="https://noa.ua/wp-content/uploads/2023/04/tuna-sushi-burger-350x350.webp" alt="">
+                        <p>{{"rols" | translate}}</p>
+                    </a>
+                </div>
+
+                <div class="right">
+                    <a href="/product/sets">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtroly-350x350.webp" alt="">
+                        <p>{{"sets" | translate}}</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <a href="/product/deserts">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtdeserty-350x350.webp" alt="">
+                        <p>{{"deserts" | translate}}</p>
+                    </a>
+                </div>
+
+                <div class="right">
+                    <a href="/product/drinks">
+                        <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtnapoyi-350x350.webp" alt="">
+                        <p>{{"drinks" | translate}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main-products">
+            <div class="container">
+                <div class="first-product" *ngFor="let product of currentProduct">
+                    <a href="/products/{{product.path}}">
+                        <img width="300px" height="300px" [src]="product.url" alt="">
+                        <div class="info">
+                            <p class="name">{{product.name}}</p>
+                            <p class="weight">{{product.weight}}</p>
+                        </div>
+                        <div class="description" style="display: block;">
+                            <p> {{product.description}}</p>
+                        </div>
+                        <button class="order-btn" style="color: white;">Замовити</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

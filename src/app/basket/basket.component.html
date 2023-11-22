@@ -1,0 +1,11 @@
+<div class="container">
+
+    <p *ngIf="!showCart">{{"cart-text" | translate}}</p>
+    <div class="test">
+        <div class="product" *ngFor="let product of basket">
+            <p>{{product.name}} {{product.weight}} {{product.price}}ГРН</p>
+        </div>
+    </div>
+    <p class="total-price">{{"price" | translate}} {{totalPrice}}ГРН</p>
+    <button class="check-out" (click)="order()">{{"order" | translate}}</button>
+</div>

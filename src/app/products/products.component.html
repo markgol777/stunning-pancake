@@ -1,0 +1,177 @@
+<div class="sort-menu">
+    <div class="container">
+        <div class="top">
+            <div class="culinasia-special">
+                <p>
+                    <a href="/product/culinasia-special">Culinasia special</a>
+                </p>
+            </div>
+            <div class="support-dish">
+                <p>
+                    <a href="/product/support-dish">{{"starters" | translate}}</a>
+                </p>
+            </div>
+            <div class="breakfast-18">
+                <p>
+                    <a href="/product/breakfast-18">{{"breakfast-text" | translate}}</a>
+                </p>
+            </div>
+            <div class="ramen">
+                <p>
+                    <a href="/product/ramen">{{"ramen" | translate}}</a>
+                </p>
+            </div>
+            <div class="asian-wok">
+                <p>
+                    <a href="/product/asian-wok">Asian Wok</a>
+                </p>
+            </div>
+            <div class="asian-poke">
+                <p>
+                    <a href="/product/asian-poke">Asian Poke</a>
+                </p>
+            </div>
+            <div class="sushi-burger">
+                <p>
+                    <a href="/product/sushi-burger">{{"sushi-burgers" | translate}}</a>
+                </p>
+            </div>
+            <div class="rols">
+                <p>
+                    <a href="/product/rols">Роли</a>
+                </p>
+            </div>
+            <div class="sets">
+                <p>
+                    <a href="/product/sets">Cети</a>
+                </p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="deserts">
+                <p>
+                    <a href="/product/deserts">Десерти</a>
+                </p>
+            </div>
+            <div class="drinks">
+                <p>
+                    <a href="/product/drinks">Напої</a>
+                </p>
+            </div>
+            <div class="drinks-18">
+                <p>
+                    <a href="/product/drinks-18">Алкогольні напої 18+</a>
+                </p>
+            </div>
+            <div class="noa-shop">
+                <p>
+                    <a href="/product/noa-shop">NOA shop</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sort-menu-mobile">
+    <div class="row">
+        <div class="left">
+            <a href="/product/culinasia-special">
+                <img src="https://noa.ua/wp-content/uploads/2023/01/ramen-kari-z-krevetkamy-4-350x350.webp"
+                    alt="">
+                <p>Culinasia special</p>
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="/product/breakfast-18">
+                <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtsnidanky-350x350.webp"
+                    alt="">
+                <p>{{"breakfast-text" | translate}}</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <a href="/product/support-dish">
+                <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtstartery-350x350.webp"
+                    alt="">
+                <p>{{"starters" | translate}}</p>
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="/product/ramen">
+                <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtramen-350x350.webp" alt="">
+                <p>{{"ramen" | translate}}</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <a href="/product/asian-poke">
+                <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtasian-wok-350x350.webp"
+                    alt="">
+                <p>Asian Poke</p>
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="/product/sushi-burger">
+                <img src="https://noa.ua/wp-content/uploads/2023/04/tuna-sushi-burger-350x350.webp" alt="">
+                <p>{{"sushi-burgers" | translate}}</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <a href="/product/rols">
+                <img src="https://noa.ua/wp-content/uploads/2023/04/tuna-sushi-burger-350x350.webp" alt="">
+                <p>{{"rols" | translate}}</p>
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="/product/sets">
+                <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtroly-350x350.webp" alt="">
+                <p>{{"sets" | translate}}</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <a href="/product/deserts">
+                <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtdeserty-350x350.webp" alt="">
+                <p>{{"deserts" | translate}}</p>
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="/product/drinks">
+                <img src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtnapoyi-350x350.webp" alt="">
+                <p>{{"drinks" | translate}}</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="main-products">
+    <div class="container">
+        <div class="first-product" *ngFor="let product of currentProduct">
+            <a href="/products/{{product.path}}">
+                <img width="300px" height="300px" [src]="product.url" alt="">
+                <div class="info">
+                    <p class="name">{{product.name}}</p>
+                    <p class="weight">{{product.weight}}</p>
+                </div>
+                <div class="description">
+                    <p>{{ product.description | slice:0:100 }}{{ product.description.length > 20 ? '...' : '' }}</p>
+                </div>
+                <button class="order-btn" style="color: white;">Замовити</button>
+            </a>
+
+        </div>
+    </div>
+</div>

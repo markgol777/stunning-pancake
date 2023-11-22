@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="image">
+        <img [src]="currentProduct.url" alt="">
+    </div>
+    <div class="description">
+        <p class="weight">{{currentProduct.weight}}</p>
+        <p class="name">{{currentProduct.name}}</p>
+        <p class="description">{{currentProduct.description}}</p>
+
+        <button class="add-to-cart" (click)="addToCart()">Додати в кошик</button>
+        <button class="quick-order">Швидке замовлення</button>
+    </div>
+</div>

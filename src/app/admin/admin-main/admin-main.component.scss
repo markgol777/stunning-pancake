@@ -1,0 +1,22 @@
+.container {
+    padding-left: 100px;
+    padding-top: 100px;
+    .add-product, .log-out {
+        border: 1px solid #000;
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .log-out {
+        border-top: none;
+    }
+
+    .text {
+        text-decoration: none;
+        color: black;
+    }
+}

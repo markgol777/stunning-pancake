@@ -1,0 +1,98 @@
+.container {
+  padding-left: 100px;
+  padding-top: 100px;
+  display: flex;
+  height: 500px;
+
+  .menu-container {
+    .add-product,
+    .log-out {
+      border: 1px solid #000;
+      width: 200px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .log-out {
+      border-top: none;
+    }
+
+    .text {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .forms {
+    margin-left: 20px;
+
+    input[type=text], input[type=button], input[type=number] {
+      height: 40px;
+      width: 400px;
+      border-radius: 5px;
+      border: 1px solid #000;
+      display: block;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    #upload {
+      margin-bottom: 20px;
+    }
+
+    .add-product-btn {
+      margin-top: 10px;
+    }
+  }
+
+}
+
+.button-show-add {
+  margin-bottom: 20px;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+.add-product-btn {
+  background-color: transparent;
+}
+
+
+table {
+  font-size: 14px;
+  th {
+    border: 1px solid #000;
+  }
+
+  td {
+    text-align: center;
+    border: 1px solid #000;
+  }
+}
+
+.tables {
+  margin-left: 100px;
+}
+
+.delete-btn, .edit-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  margin-left: 10px;
+  color: white;
+  border: none;
+  background-color: #C41E3A;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background-color: #FFD700;
+}

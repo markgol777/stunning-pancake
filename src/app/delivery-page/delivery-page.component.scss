@@ -1,0 +1,300 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .green-text {
+      color: #2d7d7d;
+    }
+  }
+}
+
+.green-zone,
+.yellow-zone,
+.red-zone {
+  display: flex;
+
+  h3 {
+    color: #599921;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .right {
+    margin-left: 40px;
+
+    li {
+      float: left;
+      list-style-type: none;
+    }
+
+    ul li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: block;
+      float: left;
+      border: 2px solid #599921;
+      margin-right: 10px;
+      margin-top: 9px;
+    }
+  }
+}
+
+.yellow-zone,
+.red-zone {
+  margin-top: 30px;
+}
+
+.yellow-zone {
+  h3 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  li {
+    float: left;
+    list-style-type: none;
+  }
+
+  ul li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    border: 2px solid #ffcc00 !important;
+    margin-right: 10px;
+    margin-top: 9px;
+  }
+}
+
+
+.red-zone {
+  h3 {
+    color: #EF2F3D;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  li {
+    float: left;
+    list-style-type: none;
+  }
+
+  ul li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    border: 2px solid #EF2F3D !important;
+    margin-right: 10px;
+    margin-top: 9px;
+  }
+}
+
+.section3 {
+  margin-bottom: 30px;
+
+  .container {
+    padding-top: 50px;
+    width: 68%;
+    text-align: left;
+
+    h2 {
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 46px;
+      line-height: 1.2em;
+      font-weight: 400;
+      color: #2D2C2C;
+    }
+
+    p {
+      font-weight: 300;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section4 {
+  width: 92%;
+
+  h2 {
+    font-size: 46px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .payment-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .first,
+  .second,
+  .third {
+    display: flex;
+    width: 30%;
+
+    .left {
+      margin-right: 50px;
+    }
+
+    .right {
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.section5 {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    font-size: 46px;
+    font-weight: 400;
+    width: 66%;
+  }
+
+  p {
+    width: 66%;
+  }
+
+  ul {
+    width: 66%;
+  }
+
+  li {
+    float: left;
+    list-style-type: none;
+  }
+
+  ul li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    border: 2px solid #599921;
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+}
+
+.section-2 {
+  width: 92%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+  .section-2 {
+    display: flex;
+    flex-direction: column-reverse !important;
+
+    .right {
+      margin-bottom: 30px;
+
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+
+  .section3 {
+    .container {
+      width: 88%;
+
+      h2 {
+        font-size: 40px;
+      }
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .section4 {
+    .payment-container {
+      flex-wrap: wrap;
+
+      .first,
+      .second,
+      .third {
+        width: 45% !important;
+        margin-right: 10px;
+      }
+
+      .first {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .section5 {
+
+    h2,
+    p,
+    ul {
+      width: 88%;
+    }
+
+    h2:nth-child(1) {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+
+    .section4 {
+      .payment-container {
+        flex-direction: column;
+
+        .first,
+        .second,
+        .third {
+          width: 100% !important;
+          margin-bottom: 20px;
+        }
+
+        .third {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}

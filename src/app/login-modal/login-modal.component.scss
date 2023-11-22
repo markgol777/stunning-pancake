@@ -1,0 +1,38 @@
+.container {
+  padding: 30px 70px;
+  background-image: url('https://noa.ua/wp-content/themes/tomatina/img/bg-w-o3.png');
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  input {
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sign-in-btn {
+    border: 1px solid #000;
+    background-color: transparent;
+  }
+
+  .sign-up-text {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 30px 30px;
+        input {
+            width: 100%;
+        }
+    }
+}

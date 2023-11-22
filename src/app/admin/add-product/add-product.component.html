@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="menu-container">
+        <div class="add-product"><a class="text" href="/add-product">Add Product</a></div>
+        <div class="log-out"><a class="text" (click)="logout()">Log out</a></div>
+    </div>
+    <div class="forms">
+        <button class="button-show-add" (click)="showAddFunc()">show Add</button>
+        <form action="" *ngIf="showAdd">
+            <input class="product-name" type="text" placeholder="product name">
+            <input class="product-path" type="text" placeholder="product path">
+            <input class="product-weight" type="text" placeholder="product weight">
+            <input class="product-description" type="text" placeholder="product description">
+            <input class="product-price" id="price" type="number" placeholder="product price">
+            <input type="file" name="upload" id="upload" (change)="upload($event)">
+            <p class="success-text" *ngIf="showText">image successfully uploaded</p>
+                <select id="category">
+                    <option disabled>Chose category</option>
+                    <option name="culinasia-special" id="culinasia-special" value="culinasia-special">Culinasia special</option>
+                    <option name="support-dish" id="support-dish" value="support-dish">Страви підтримки</option>
+                    <option name="breakfast-18" id="breakfast-18" value="breakfast-18">Сніданки до 18:00</option>
+                    <option name="starters" id="starters" value="starters">Стартери</option>
+                    <option name="ramen" id="ramen" value="ramen">Рамен</option>
+                    <option name="asian-wok" id="asian-wok" value="asian-wok">Asian Wok</option>
+                    <option name="asian-poke" id="asian-poke" value="asian-poke">Asian Poke</option>
+                    <option name="sushi-burger" id="sushi-burger" value="sushi-burger">Суші-бургери</option>
+                    <option name="rols" id="rols" value="rols">Роли</option>
+                    <option name="sets" id="sets" value="sets">Cети</option>
+                    <option name="deserts" id="deserts" value="deserts">Десерти</option>
+                    <option name="drinks" id="drinks" value="drinks">Напої</option>
+                    <option name="drinks-18" id="drinks-18" value="drinks-18">Алкогольні напої 18+</option>
+                    <option name="noa-shop" id="noa-shop" value="noa-shop">NOA shop</option>
+                </select>
+            <input type="button" class="add-product-btn" (click)="addProduct()" *ngIf="!showEditBtn" value="Add">
+            <input type="button" class="add-product-btn" (click)="saveProduct()" *ngIf="showEditBtn" value="Edit">
+        </form>
+    </div>
+    <div class="tables" style="overflow-y: scroll" *ngIf="!showAdd">
+        <table>
+            <td>product id</td>
+            <td>product name</td>
+            <td>product path</td>
+            <td>product weight</td>
+            <td>product price</td>
+            <td>product description</td>
+            <td>product category</td>
+            <td>product image</td>
+            <td>Actions</td>
+
+            <tbody *ngFor="let product of products">
+                <th>{{product.id}}</th>
+                <th>{{product.name}}</th>
+                <th>{{product.path}}</th>
+                <th>{{product.weight}}</th>
+                <th>{{product.price}}</th>
+                <th>{{ product.description | slice:0:20 }}{{ product.description.length > 20 ? '...' : '' }}</th>
+                <th>{{product.category}}</th>
+                <th><img style="height: 40px; width: 100px;" src="{{product.url}}" alt=""></th>
+                <th><button class="delete-btn" (click)="delete(product.id)">Delete</button><button class="edit-btn" (click)="edit(product.id)">Edit</button></th>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,232 @@
+main {
+  .section1 {
+    height: 630px;
+    width: 100%;
+    background-image: url('https://noa.ua/wp-content/uploads/2023/08/thai-site-banner-copy.png-nov-1550x630.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .section2 {
+    .heading {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      h1 {
+        margin-top: 30px;
+        font-family: 'Varela Round', sans-serif;
+        margin-bottom: 30px;
+
+        .asia-text {
+          color: #2d7d7d;
+        }
+      }
+    }
+
+    .sort-menu {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .container {
+        width: 92%;
+        background-color: #F5F5F5;
+        height: 94px;
+        border-radius: 6px;
+        margin-bottom: 30px;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          div {
+            font-size: 13px;
+            width: 130px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Varela Round', sans-serif;
+            color: #6D6D6D;
+            font-size: 14px;
+            border-radius: 6px;
+            transition: 0.4s;
+            margin-right: 10px;
+            cursor: pointer;
+          }
+
+          a {
+            color: #6D6D6D;
+            text-decoration: none;
+          }
+
+
+          .active {
+            font-size: 13px;
+            width: 130px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 14px;
+            border-radius: 6px;
+            transition: 0.4s;
+            margin-right: 10px;
+            color: white;
+            background-color: #2d7d7d;
+          }
+
+          div:hover {
+            color: white !important;
+            background-color: #2d7d7d;
+          }
+        }
+
+        .bottom {
+          display: flex;
+
+          div {
+            font-family: 'Varela Round', sans-serif;
+            color: #6D6D6D;
+            font-size: 13px;
+            height: 44px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            margin-right: 10px;
+            padding: 0 15px;
+          }
+
+          div:hover {
+            color: white;
+            background-color: #2d7d7d;
+          }
+        }
+      }
+    }
+
+    .main-products {
+      display: flex;
+      justify-content: center;
+
+      .container {
+        width: 92%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .first-product {
+          width: 316px;
+          height: 501px;
+          transition: 0.4s;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 5px;
+          margin-right: 20px;
+
+          .info {
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+          }
+
+          .description {
+            color: #6D6D6D;
+            font-size: 15px;
+          }
+
+          .description p {
+            word-break: break-all;
+            white-space: normal;
+          }
+        }
+
+        .first-product:hover {
+          box-shadow: 1px 0px 12px -6px rgba(66, 68, 90, 1);
+        }
+
+        .order-btn {
+          margin-top: 20px;
+          width: 100%;
+          height: 40px;
+          border: none;
+          border-radius: 5px;
+          transition: 0.4s;
+        }
+
+        .order-btn:hover {
+          background-color: #2d7d7d;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.sort-menu-mobile {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  .row {
+    display: flex;
+    margin-bottom: 30px;
+
+    .left,
+    .right {
+      margin-right: 20px;
+
+      img {
+        height: 124px;
+        width: 124px;
+      }
+    }
+
+    .right {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    .top {
+      text-align: center;
+    }
+  }
+
+  main {
+    .section2 {
+      .sort-menu {
+        display: none;
+      }
+
+      .sort-menu-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-products {
+        display: flex;
+        justify-content: center;
+
+        .container {
+          width: unset;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

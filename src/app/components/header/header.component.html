@@ -1,0 +1,282 @@
+<header>
+  <div class="container-logo">
+    <a href="/" class="logo">
+      <img
+        src="https://noa.ua/wp-content/uploads/2020/10/logo_one-1.svg"
+        alt=""
+      />
+    </a>
+    <div class="menu-bg" id="menu-bg"></div>
+  </div>
+
+  <div class="container-menu">
+    <p class="menu-text">
+      {{ "menu" | translate }}
+    </p>
+    <div class="menu">
+      <div class="top-menu">
+        <div class="category">
+          <a href="/product/culinasia-special">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/01/ramen-kari-z-krevetkamy-4-110x110.webp"
+              alt=""
+            />
+            <p>Culinasia special</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/breakfast-18">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtsnidanky-110x110.png"
+              alt=""
+            />
+            <p>Сніданки до 18:00</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/starters">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtstartery-110x110.png"
+              alt=""
+            />
+            <p>Стартери</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/ramen">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtramen-110x110.png"
+              alt=""
+            />
+            <p>Рамен</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/asian-wok">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtasian-wok-110x110.png"
+              alt=""
+            />
+            <p>Asian Wok</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/asian-poke">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtasian-poke-110x110.png"
+              alt=""
+            />
+            <p>Asian Poke</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom-menu">
+        <div class="category">
+          <a href="/product/sushi-burger">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/04/tuna-sushi-burger-110x110.png"
+              alt=""
+            />
+            <p>Суші-бургери</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/rols">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtroly-110x110.png"
+              alt=""
+            />
+            <p>Роли</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/sets">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtsushi-sety-110x110.png"
+              alt=""
+            />
+            <p>СУШІ СЕТИ</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/deserts">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtdeserty-110x110.png"
+              alt=""
+            />
+            <p>ДЕСЕРТИ</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/drinks">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/08/rubryky-na-sajtnapoyi-110x110.png"
+              alt=""
+            />
+            <p>НАПОЇ</p>
+          </a>
+        </div>
+
+        <div class="category">
+          <a href="/product/drinks-18">
+            <img
+              src="https://noa.ua/wp-content/uploads/2022/10/gin-tonic-pink-site-110x110.png"
+              alt=""
+            />
+            <p style="text-align: center">АЛКОГОЛЬНІ НАПОЇ 18+</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom2-menu">
+        <div class="category">
+          <a href="product/sushi-burger">
+            <img
+              src="https://noa.ua/wp-content/uploads/2023/04/tuna-sushi-burger-110x110.png"
+              alt=""
+            />
+            <p>Суші-бургери</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="menu-text">
+      <a href="/delivery">{{ "delivery" | translate }}</a>
+    </p>
+  </div>
+
+  <div class="persona-info-container">
+    <div class="switch-language">
+      <select
+        (change)="switchLanguage($event)"
+        class="select-test input-language"
+        name=""
+        id=""
+      >
+        <option value="ua">Українська</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="basket">
+      <a href="/basket">
+        <img
+          src="/assets/images/shopping-cart-outline-svgrepo-com.svg"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="leave-review">
+      <a
+        href="https://go.expirenza.com/review?code=8H8A0"
+        style="text-decoration: none; color: white"
+        target="_blank"
+      >
+        <p>{{ "leave-review" | translate }}</p>
+      </a>
+    </div>
+
+    <div class="heart">
+      <img
+        src="https://noa.ua/wp-content/themes/tomatina/img/heart.png"
+        alt=""
+      />
+    </div>
+    <div class="phone">
+      <img
+        src="https://noa.ua/wp-content/themes/tomatina/img/phone.png"
+        alt=""
+      />
+    </div>
+    <div class="login" (click)="openDialog()">
+      <img
+        class="profile-image"
+        src="https://noa.ua/wp-content/themes/tomatina/img/icons/user.svg"
+        alt=""
+      />
+      <span class="login-text">
+        <div *ngIf="loginText == 'Вхід'; then thenBlock; else elseBlock"></div>
+        <ng-template #thenBlock (click)="openDialog()">{{
+          loginText
+        }}</ng-template>
+        <ng-template #elseBlock
+          ><a [href]="loginText">{{ loginText }}</a></ng-template
+        >
+      </span>
+    </div>
+  </div>
+
+  <nav role="navigation" class="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <div class="" style="display: flex; justify-content: space-between">
+          <div class="login" (click)="openDialog()">
+            <img
+              class="profile-image"
+              src="https://noa.ua/wp-content/themes/tomatina/img/icons/user.svg"
+              alt=""
+            />
+            <span class="login-text">
+              <div
+                *ngIf="loginText == 'Вхід'; then thenBlock; else elseBlock"
+              ></div>
+              <ng-template #thenBlock (click)="openDialog()">{{
+                loginText
+              }}</ng-template>
+              <ng-template #elseBlock
+                ><a [href]="loginText">{{ loginText }}</a></ng-template
+              >
+            </span>
+          </div>
+          <div class="basket">
+            <a href="/basket">
+              <img
+                height="40px"
+                width="40px"
+                style="filter: invert(1)"
+                src="/assets/images/shopping-cart-outline-svgrepo-com.svg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="switch-language">
+            <select
+              (change)="switchLanguage($event)"
+              class="select-test"
+              style="color: black"
+            >
+              <option value="ua">Українська</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="" style="display: flex; justify-content: center">
+          <div class="leave-review" style="margin-top: 20px">
+            <a
+              href="https://go.expirenza.com/review?code=8H8A0"
+              style="text-decoration: none; color: white"
+              target="_blank"
+            >
+              <p>{{ "leave-review" | translate }}</p>
+            </a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</header>
